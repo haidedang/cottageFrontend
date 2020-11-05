@@ -36,7 +36,7 @@ const Nav = () => (
                   <Link to="/">Blog</Link>
                 </li>
                 <li>
-                <Link to="/">Shoutouts</Link>
+                <Link to="/shoutout">Shoutouts</Link>
                 </li>
               </ul>
             </div>
