@@ -1,0 +1,13 @@
+.container {
+    background-color: rosybrown;
+    height:100vh;
+}
+
+.header {
+      padding-top:10px;
+      background-color: white;
+      text-align:center;
+      font-family:'Caveat';
+      font-size: xx-large;
+      height: 60px;
+}

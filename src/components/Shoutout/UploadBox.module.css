@@ -1,0 +1,71 @@
+h2 {
+    color: black;
+}
+
+.container {
+    width:80%;
+    margin:auto; 
+    padding-top: 20px;
+}
+
+.wrapper {
+    background: #fff;
+    border: .0625em solid #e8ebed;
+    border-radius: .3125em;
+    margin-bottom: 1.25em;
+    padding: .9375em;
+    width: 100%;
+}
+
+.wrapper p {
+    margin-bottom: 5px;
+}
+
+.uploadButton {
+    text-align: center;
+    background-image: url('../../../static/add.png');
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.inactive {
+    display: none;
+}
+
+.add {
+    display:flex;
+    border-bottom: .0625em solid #d4d7d9
+}
+
+.addFiles {
+    display:block;
+    font-weight: 500;
+}
+
+.file {
+    border-bottom: .0625em solid #d4d7d9;
+    padding: 1.125em 0 1.0625em;
+    width:100%;
+    display:flex;
+}
+
+.subTitle{
+    font-size: small;
+}
+
+.fileName {
+    width: calc(100% - 20px);
+}
+
+.svg {
+    height: 15px;
+    width:15px;
+}
+
+.spinner {
+    text-align:center;
+    margin-top:90px;
+}
+
