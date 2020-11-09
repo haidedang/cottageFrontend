@@ -44,8 +44,8 @@ const query = graphql`
           }
           image {
             childImageSharp {
-              fixed(width: 800, height: 500) {
-                src
+              fluid {
+                ...GatsbyImageSharpFluid_tracedSVG
               }
             }
           }

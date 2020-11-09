@@ -5,6 +5,7 @@ import Moment from "react-moment";
 import Layout from "../components/layout";
 import Markdown from "react-markdown";
 import articleStyles from './articleStyles.module.css'
+import BackgroundImage from 'gatsby-background-image'
 
 export const query = graphql`
   query ArticleQuery($slug: String!) {
@@ -17,8 +18,8 @@ export const query = graphql`
       image {
         publicURL
         childImageSharp {
-          fixed {
-            src
+          fluid(quality: 90, maxWidth:1920) {
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
@@ -64,22 +65,23 @@ const Article = ({ data }) => {
     };
   }
   
-
+  console.log(data)
   return (
     <Layout seo={seo}>
       <div>
-        <div
+        <BackgroundImage
           id="banner"
           className={[articleStyles.bannerImage,"uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin"].join(' ')}
-          data-src={article.image.publicURL}
+          fluid={article.image.childImageSharp.fluid}
+          /* data-src={article.image.publicURL}
           data-srcset={article.image.publicURL}
-          data-uk-img
+          data-uk-img */
         >
           <div className={articleStyles.captionHeader}>
           <h1 className={articleStyles.bannerCaption}>{article.title}</h1>
           </div>
           
-        </div>
+        </BackgroundImage>
 
         <div className={[articleStyles.articleSection, "uk-section"].join(' ')}>
           <div className="uk-container uk-container-small">

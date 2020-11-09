@@ -1,17 +1,23 @@
 import React from "react";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
+import cardStyles from './card.module.css'
 
 const Card = ({ article }) => {
   return (
     <Link to={`/article/${article.node.slug}`} className="uk-link-reset">
       <div className="uk-card uk-card-muted">
-        <div className="uk-card-media-top">
-          <Img
-            fixed={article.node.image.childImageSharp.fixed}
-            imgStyle={{ position: "static" }}
-          />
-        </div>
+        <Img 
+        className={[cardStyles.imageWrapper, "uk-card-media-top"].join(' ')}
+        fluid={article.node.image.childImageSharp.fluid}
+         
+        /*  objectFit="cover"
+         objectPosition="50% 50%" */
+        /*  imgStyle={{ position: "static",  objectFit:"cover" }} */
+        imgStyle={{"width": "100%", "max-height":"100%"}}
+        >
+        
+        </Img>
         <div className="uk-card-body">
           <p id="category" className="uk-text-uppercase">
             {article.node.category.name}
