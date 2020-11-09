@@ -19,9 +19,10 @@ h1 {
   line-height: 1.13636 !important;
 }
 
+
 #banner {
-  margin: 20px !important;
-  height: 800px !important;
+  margin: 20px ;
+  height: 800px ;
 }
 
 #editor {
@@ -39,3 +40,4 @@ img:hover {
   opacity: 1 !important;
   transition: opacity 0.25s cubic-bezier(0.39, 0.575, 0.565, 1) !important;
 }
+
