@@ -37,13 +37,33 @@ export const query = graphql`
 `;
 
 const Article = ({ data }) => {
-  const article = data.strapiArticle;
-  const seo = {
-    metaTitle: article.title,
-    metaDescription: article.description,
-    shareImage: article.image,
-    article: true,
+  let article = {
+    title:' ',
+    image: {
+      publicURL:' '
+    },
+    content: ' ', 
+    author: {
+      picture: {
+        childImageSharp : {
+          fixed: ' '
+        }
+      },
+      name: ' '
+    },
+    published_at: ' '
   };
+  let seo= {};
+  if(data.strapiArticle !== null){
+     article = data.strapiArticle;
+     seo = {
+      metaTitle: article.title,
+      metaDescription: article.description,
+      shareImage: article.image,
+      article: true,
+    };
+  }
+  
 
   return (
     <Layout seo={seo}>
