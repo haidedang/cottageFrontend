@@ -41,7 +41,10 @@ const Article = ({ data }) => {
   let article = {
     title:' ',
     image: {
-      publicURL:' '
+      publicURL:' ',
+      childImageSharp:{
+        fluid: {}
+      }
     },
     content: ' ', 
     author: {
@@ -65,7 +68,7 @@ const Article = ({ data }) => {
     };
   }
   
-  console.log(data)
+
   return (
     <Layout seo={seo}>
       <div>

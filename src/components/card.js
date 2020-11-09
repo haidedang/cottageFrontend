@@ -4,6 +4,8 @@ import Img from "gatsby-image";
 import cardStyles from './card.module.css'
 
 const Card = ({ article }) => {
+
+ 
   return (
     <Link to={`/article/${article.node.slug}`} className="uk-link-reset">
       <div className="uk-card uk-card-muted">
