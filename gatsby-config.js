@@ -1,10 +1,17 @@
 require("dotenv").config({
-  path: `.env`,
+  path: `.env.${process.env.NODE_ENV}`,
 });
 
 module.exports = {
   plugins: [
     "gatsby-plugin-react-helmet",
+    {
+      resolve: "@debiki/gatsby-plugin-talkyard",
+      options: {
+        talkyardServerUrl:
+          "https://comments-for-thecottagedream-com.talkyard.net",
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -15,7 +22,7 @@ module.exports = {
     {
       resolve: "gatsby-source-strapi",
       options: {
-        apiURL: "https://cottagecorecms.herokuapp.com",
+        apiURL: process.env.API_URL,
         contentTypes: ["article", "category", "writer"],
         singleTypes: [`homepage`, `global`],
         queryLimit: 1000,

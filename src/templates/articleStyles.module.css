@@ -1,16 +1,14 @@
-
-
 .bannerImage {
-    height:90vh !important;
-    margin: 0 !important;
+  height: 90vh !important;
+  margin: 0 !important;
 }
 
 .captionHeader {
-    padding: 60px 20% 60px 123px;
+  padding: 60px 20% 60px 123px;
 }
 
 .captionHeader h1 {
-    font-size: 65px !important;
+  font-size: 65px !important;
 }
 
 /* .bannerCaption {
@@ -18,62 +16,68 @@
 } */
 
 .content {
-    max-width:700px;
-    margin:auto;
+  max-width: 700px;
+  margin: auto;
 }
 
 .content img {
-    display:block;
-    max-width: 350px !important;
-    margin: auto;
-    border-radius: 20px;
+  display: block;
+  max-width: 350px !important;
+  margin: auto;
+  border-radius: 20px;
 }
 
-.content p, h3, h2, li {
-    font-size: 20px;
-    line-height: 1.65;
+.content p,
+h3,
+h2,
+li {
+  font-size: 20px;
+  line-height: 1.65;
 }
-
 
 @media (max-width: 479px) {
-    /* h1 {
+  /* h1 {
         font-size: 30px !important;
     } */
 
-    .content img {
-        max-width: 300px !important;
-    }
+  .content img {
+    max-width: 300px !important;
+  }
 
-    .captionHeader h1{
-        font-size: 30px !important;
-    }
+  .captionHeader h1 {
+    font-size: 30px !important;
+  }
 
-    .bannerImage {
-        filter: brightness(95%) !important;
-        height: 80vh !important; 
-        margin:0 !important;
-        
-    }
+  .bannerImage {
+    filter: brightness(95%) !important;
+    height: 80vh !important;
+    margin: 0 !important;
+  }
 
-    .articleSection {
-        position: relative; 
-        background-color: white;
-        width:90%;
-        margin: 0 auto 0 auto ;
-        margin-top: -10vh;
-        border-radius: 20px;
-    }
+  .articleSection {
+    position: relative;
+    background-color: white;
+    width: 90%;
+    margin: 0 auto 0 auto;
+    margin-top: -10vh;
+    border-radius: 20px;
+  }
 }
 
-@media (min-width:768px){
-    .bannerCaption {
-        font-weight: 800 !important;
-        font-size: 72px !important;
-    }
+@media (min-width: 768px) {
+  .bannerCaption {
+    font-weight: 800 !important;
+    font-size: 72px !important;
+  }
 
-    .captionHeader h1 {
-        padding: 110px 46px 70px !important;
-        max-width: 900px;
-        font-family: 'Arial'!important;
-    }
+  .captionHeader h1 {
+    padding: 110px 46px 70px !important;
+    max-width: 900px;
+    font-family: "Arial" !important;
+  }
+
+  .commentSection {
+    max-width: 700px;
+    margin: auto;
+  }
 }
