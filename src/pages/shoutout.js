@@ -18,20 +18,29 @@ const ShoutoutPage = () => {
         <div className={ShoutoutStyles.image}>
           <div className={ShoutoutStyles.container}>
             <div>
-              <h1>Free Cottage Shoutouts</h1>
+              <h1>Escape from the chaos... and enter the cottagecore dream</h1>
               <br></br>
             </div>
             <div>
-              <p className={ShoutoutStyles.landingText}>
-                Welcome to the Cottage Dream! Every week we will select some of
-                your submitted pictures and share them on our Instagram Channel.
-                Let’s build a cottagecore community together!
-              </p>
+              <p className={ShoutoutStyles.landingText}></p>
             </div>
           </div>
         </div>
 
         <Container className={ShoutoutStyles.requirements}>
+          <hr />
+          <p className={ShoutoutStyles.aboutUs}>
+            The Cottagecore Dream is a lifestyle blog and community inspired by
+            the ideas of simplicity, sustainability, slow living and harmony
+            with nature. We offer a safe and peaceful place, where you can find
+            lovely written articles and guides about various cottagecore themes.
+            Our mission is to build an inclusive cottagecore community, where
+            everybody can escape to and LIVE the Cottagecore Dream.
+          </p>
+          <hr />
+        </Container>
+
+        {/*   <Container className={ShoutoutStyles.requirements}>
           <div className={[ShoutoutStyles.requirementsHeading].join(" ")}>
             <h2> - Photo Requirements - </h2>
           </div>
@@ -81,10 +90,10 @@ const ShoutoutPage = () => {
           </div>
         </Container>
 
-        <UploadButton uploadButton={ShoutoutStyles.active} path="/upload" />
+        <UploadButton uploadButton={ShoutoutStyles.active} path="/upload" /> */}
 
         <div className={[ShoutoutStyles.requirementsHeading].join(" ")}>
-          <h2> Follow us on Instagram :)</h2>
+          <h2> Follow the dream on Instagram.</h2>
         </div>
 
         <div className={ShoutoutStyles.feed}>
@@ -95,7 +104,7 @@ const ShoutoutPage = () => {
           />
         </div>
 
-        <div id="about" className={ShoutoutStyles.about}>
+        {/* <div id="about" className={ShoutoutStyles.about}>
           <Container className="mt-5">
             <Row>
               <Col
@@ -116,7 +125,7 @@ const ShoutoutPage = () => {
               </Col>
             </Row>
           </Container>
-        </div>
+        </div> */}
       </div>
     </Layout>
   );

@@ -24,21 +24,49 @@ const Nav = () => (
         <section>
           <div>
             <nav className="navbar navbar-light navbar-expand-md">
-                <div className="container-fluid"><a className="navbar-brand" href="/">CD</a><button data-toggle="collapse" className="navbar-toggler" data-target="#navcol-2"><span className="sr-only">Toggle navigation</span><span className="navbar-toggler-icon"></span></button>
-                    <div className="collapse navbar-collapse"
-                        id="navcol-2">
-                        <ul className="nav navbar-nav mx-auto">
-                            <li className="nav-item" role="presentation"><a className="nav-link active" href="/">Blog</a></li>
-                            <li className="nav-item" role="presentation"><a className="nav-link" href="/shoutout">Shoutouts</a></li>
-                           {/*  <li className="nav-item" role="presentation"><a className="nav-link" href="#">Shop</a></li> */}
-                            <li className="nav-item" role="presentation"></li>
-                        </ul>
-                        <ul className="nav navbar-nav">
-                            <li className="nav-item" role="presentation"></li>
-                            <li className="nav-item" role="presentation"><a className="nav-link" href="https://www.instagram.com/cottagecoredream_/"><i style={{"font-size": "30px"}} className="fa fa-instagram"></i></a></li>
-                        </ul>
-                    </div>
+              <div className="container-fluid">
+                <a className="navbar-brand" href="/">
+                  CD
+                </a>
+                <button
+                  data-toggle="collapse"
+                  className="navbar-toggler"
+                  data-target="#navcol-2"
+                >
+                  <span className="sr-only">Toggle navigation</span>
+                  <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navcol-2">
+                  <ul className="nav navbar-nav mx-auto">
+                    <li className="nav-item" role="presentation">
+                      <a className="nav-link active" href="/">
+                        Blog
+                      </a>
+                    </li>
+                    <li className="nav-item" role="presentation">
+                      <a className="nav-link" href="/shoutout">
+                        About Us
+                      </a>
+                    </li>
+                    {/*  <li className="nav-item" role="presentation"><a className="nav-link" href="#">Shop</a></li> */}
+                    <li className="nav-item" role="presentation"></li>
+                  </ul>
+                  <ul className="nav navbar-nav">
+                    <li className="nav-item" role="presentation"></li>
+                    <li className="nav-item" role="presentation">
+                      <a
+                        className="nav-link"
+                        href="https://www.instagram.com/cottagecoredream_/"
+                      >
+                        <i
+                          style={{ "font-size": "30px" }}
+                          className="fa fa-instagram"
+                        ></i>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
+              </div>
             </nav>
           </div>
         </section>
