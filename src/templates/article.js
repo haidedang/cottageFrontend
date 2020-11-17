@@ -99,32 +99,45 @@ const Article = ({ data }) => {
               escapeHtml={false}
             />
 
-            <hr className="uk-divider-small" />
+            <hr
+              className={[articleStyles.content, "uk-divider-small"].join(" ")}
+            />
 
-            <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
-              <div>
-                {article.author.picture && (
-                  <Img
-                    fixed={article.author.picture.childImageSharp.fixed}
-                    imgStyle={{ position: "static", borderRadius: "50%" }}
-                  />
-                )}
+            <div className={articleStyles.content}>
+              <div
+                className={["uk-grid-small uk-flex-left"].join(" ")}
+                data-uk-grid="true"
+              >
+                <div>
+                  {article.author.picture && (
+                    <Img
+                      fixed={article.author.picture.childImageSharp.fixed}
+                      imgStyle={{ position: "static", borderRadius: "50%" }}
+                    />
+                  )}
+                </div>
+                <div className="uk-width-expand">
+                  <p className="uk-margin-remove-bottom">
+                    By {article.author.name}
+                  </p>
+                  <p className="uk-text-meta uk-margin-remove-top">
+                    <Moment format="MMM Do YYYY">{article.published_at}</Moment>
+                  </p>
+                </div>
               </div>
-              <div className="uk-width-expand">
-                <p className="uk-margin-remove-bottom">
-                  By {article.author.name}
-                </p>
-                <p className="uk-text-meta uk-margin-remove-top">
-                  <Moment format="MMM Do YYYY">{article.published_at}</Moment>
-                </p>
-              </div>
+            </div>
+
+            <div
+              className={[
+                articleStyles.content,
+                articleStyles.commentSection,
+              ].join(" ")}
+            >
+              <TalkyardCommentsIframe discussionId={article.strapiId} />
+              {/* <Comments slug={article.slug}/> */}
             </div>
           </div>
         </div>
-      </div>
-      <div className={articleStyles.commentSection}>
-        {/*  <TalkyardCommentsIframe /> */}
-        <Comments slug={article.slug} />
       </div>
     </Layout>
   );
