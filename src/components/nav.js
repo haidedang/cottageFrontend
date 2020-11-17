@@ -34,7 +34,7 @@ const Nav = () => (
                         </ul>
                         <ul className="nav navbar-nav">
                             <li className="nav-item" role="presentation"></li>
-                            <li className="nav-item" role="presentation"><a className="nav-link" href="#"><i style={{"font-size": "30px"}} className="fa fa-instagram"></i></a></li>
+                            <li className="nav-item" role="presentation"><a className="nav-link" href="https://www.instagram.com/aestheticcottagecore/"><i style={{"font-size": "30px"}} className="fa fa-instagram"></i></a></li>
                         </ul>
                     </div>
                 </div>
