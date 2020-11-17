@@ -4,8 +4,11 @@ import Img from "gatsby-image";
 import Moment from "react-moment";
 import Layout from "../components/layout";
 import Markdown from "react-markdown";
-import articleStyles from './articleStyles.module.css'
-import BackgroundImage from 'gatsby-background-image'
+import articleStyles from "./articleStyles.module.css";
+import BackgroundImage from "gatsby-background-image";
+import { SERVER_URL } from "../config/config";
+import TalkyardCommentsIframe from "@debiki/gatsby-plugin-talkyard";
+import Comments from "../components/Comments";
 
 export const query = graphql`
   query ArticleQuery($slug: String!) {
@@ -14,11 +17,12 @@ export const query = graphql`
       title
       description
       content
+      slug
       publishedAt
       image {
         publicURL
         childImageSharp {
-          fluid(quality: 90, maxWidth:1920) {
+          fluid(quality: 90, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
@@ -39,56 +43,61 @@ export const query = graphql`
 
 const Article = ({ data }) => {
   let article = {
-    title:' ',
+    title: " ",
     image: {
-      publicURL:' ',
-      childImageSharp:{
-        fluid: {}
-      }
+      publicURL: " ",
+      childImageSharp: {
+        fluid: {},
+      },
     },
-    content: ' ', 
+    content: " ",
     author: {
       picture: {
-        childImageSharp : {
-          fixed: ' '
-        }
+        childImageSharp: {
+          fixed: " ",
+        },
       },
-      name: ' '
+      name: " ",
     },
-    published_at: ' '
+    published_at: " ",
   };
-  let seo= {};
-  if(data.strapiArticle !== null){
-     article = data.strapiArticle;
-     seo = {
+  let seo = {};
+  if (data.strapiArticle !== null) {
+    article = data.strapiArticle;
+    seo = {
       metaTitle: article.title,
       metaDescription: article.description,
       shareImage: article.image,
       article: true,
     };
   }
-  
 
   return (
     <Layout seo={seo}>
       <div>
         <BackgroundImage
           id="banner"
-          className={[articleStyles.bannerImage,"uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin"].join(' ')}
+          className={[
+            articleStyles.bannerImage,
+            "uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin",
+          ].join(" ")}
           fluid={article.image.childImageSharp.fluid}
           /* data-src={article.image.publicURL}
           data-srcset={article.image.publicURL}
           data-uk-img */
         >
           <div className={articleStyles.captionHeader}>
-          <h1 className={articleStyles.bannerCaption}>{article.title}</h1>
+            <h1 className={articleStyles.bannerCaption}>{article.title}</h1>
           </div>
-          
         </BackgroundImage>
 
-        <div className={[articleStyles.articleSection, "uk-section"].join(' ')}>
+        <div className={[articleStyles.articleSection, "uk-section"].join(" ")}>
           <div className="uk-container uk-container-small">
-            <Markdown className ={articleStyles.content} source={article.content} escapeHtml={false} />
+            <Markdown
+              className={articleStyles.content}
+              source={article.content}
+              escapeHtml={false}
+            />
 
             <hr className="uk-divider-small" />
 
@@ -112,6 +121,10 @@ const Article = ({ data }) => {
             </div>
           </div>
         </div>
+      </div>
+      <div className={articleStyles.commentSection}>
+        {/*  <TalkyardCommentsIframe /> */}
+        <Comments slug={article.slug} />
       </div>
     </Layout>
   );
