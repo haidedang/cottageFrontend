@@ -8,7 +8,8 @@ module.exports = {
     {
       resolve: "@debiki/gatsby-plugin-talkyard",
       options: {
-        talkyardServerUrl: "http://162.243.164.95",
+        talkyardServerUrl:
+          "https://comments-for-cottagecoredream-com.talkyard.net",
       },
     },
     {
