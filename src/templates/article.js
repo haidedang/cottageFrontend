@@ -133,7 +133,7 @@ const Article = ({ data }) => {
                 articleStyles.commentSection,
               ].join(" ")}
             >
-              <TalkyardCommentsIframe />
+              <TalkyardCommentsIframe discussionId={article.strapiId} />
               {/* <Comments slug={article.slug}/> */}
             </div>
           </div>
