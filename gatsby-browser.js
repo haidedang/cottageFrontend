@@ -1,5 +1,6 @@
 
 //import addScript from './src/utils/addScript'
+import "./src/components/tailwind.css"
 
 const addScript =  url =>  {
     return new Promise((resolve, reject) =>{

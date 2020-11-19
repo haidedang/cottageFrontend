@@ -49,7 +49,11 @@ const Nav = () => (
                       </a>
                     </li>
                     {/*  <li className="nav-item" role="presentation"><a className="nav-link" href="#">Shop</a></li> */}
-                    <li className="nav-item" role="presentation"></li>
+                    <li className="nav-item" role="presentation">
+                      <a className="nav-link" href="/freebies">
+                        Freebies
+                      </a>
+                    </li>
                   </ul>
                   <ul className="nav navbar-nav">
                     <li className="nav-item" role="presentation"></li>

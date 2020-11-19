@@ -4,6 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   plugins: [
+    `gatsby-plugin-postcss`,
     "gatsby-plugin-react-helmet",
     {
       resolve: "@debiki/gatsby-plugin-talkyard",
