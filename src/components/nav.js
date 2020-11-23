@@ -39,7 +39,7 @@ const Nav = () => (
                 <div className="collapse navbar-collapse" id="navcol-2">
                   <ul className="nav navbar-nav mx-auto">
                     <li className="nav-item" role="presentation">
-                      <a className="nav-link active" href="/">
+                      <a className="nav-link" href="/">
                         Blog
                       </a>
                     </li>
