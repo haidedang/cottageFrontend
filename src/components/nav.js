@@ -37,26 +37,28 @@ const Nav = () => (
                   <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navcol-2">
-                  <ul className="nav navbar-nav mx-auto">
-                    <li className="nav-item" role="presentation">
-                      <a className="nav-link" href="/">
+                  <ul className="nav navbar-nav mx-auto md:divide-x md:divide-grey-400  ">
+                    <li className="nav-item  " role="presentation">
+                      <a className="nav-link md:mr-10 p-0" href="/">
                         Blog
                       </a>
                     </li>
-                    <li className="nav-item" role="presentation">
-                      <a className="nav-link" href="/shoutout">
+                    <li className="nav-item " role="presentation">
+                      <a
+                        className="nav-link md:mr-10 md:ml-10 p-0"
+                        href="/shoutout"
+                      >
                         About Us
                       </a>
                     </li>
                     {/*  <li className="nav-item" role="presentation"><a className="nav-link" href="#">Shop</a></li> */}
-                    <li className="nav-item" role="presentation">
-                      <a className="nav-link" href="/freebies">
+                    <li className="nav-item " role="presentation">
+                      <a className="nav-link md:ml-10 p-0" href="/freebies">
                         Freebies
                       </a>
                     </li>
                   </ul>
-                  <ul className="nav navbar-nav">
-                    <li className="nav-item" role="presentation"></li>
+                  <ul className="nav navbar-nav m-0">
                     <li className="nav-item" role="presentation">
                       <a
                         className="nav-link"
