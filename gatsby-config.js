@@ -7,7 +7,14 @@ const tailwindConfig = require("./tailwind.config.js");
 const fullConfig = resolveConfig(tailwindConfig);
 
 module.exports = {
+  siteMetadata: {
+    // ...
+
+    url: "https://swas.io",
+    // other metadata
+  },
   plugins: [
+    `gatsby-plugin-sass`,
     "gatsby-plugin-react-helmet",
     {
       resolve: "@debiki/gatsby-plugin-talkyard",
