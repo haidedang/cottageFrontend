@@ -1,13 +1,13 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
-import Moment from "react-moment";
+//import Moment from "react-moment";
 import Layout from "../components/layout";
 import Markdown from "react-markdown";
 import articleStyles from "./articleStyles.module.css";
 import BackgroundImage from "gatsby-background-image";
 import { SERVER_URL } from "../config/config";
-import TalkyardCommentsIframe from "@debiki/gatsby-plugin-talkyard";
+//import TalkyardCommentsIframe from "@debiki/gatsby-plugin-talkyard";
 import Comments from "../components/Comments";
 
 export const query = graphql`
@@ -121,7 +121,7 @@ const Article = ({ data }) => {
                     By {article.author.name}
                   </p>
                   <p className="uk-text-meta uk-margin-remove-top">
-                    <Moment format="MMM Do YYYY">{article.published_at}</Moment>
+                    {/* <Moment format="MMM Do YYYY">{article.published_at}</Moment> */}
                   </p>
                 </div>
               </div>
@@ -133,7 +133,7 @@ const Article = ({ data }) => {
                 articleStyles.commentSection,
               ].join(" ")}
             >
-              <TalkyardCommentsIframe discussionId={article.strapiId} />
+              {/*  <TalkyardCommentsIframe discussionId={article.strapiId} /> */}
               {/* <Comments slug={article.slug}/> */}
             </div>
           </div>

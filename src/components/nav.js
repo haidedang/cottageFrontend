@@ -65,7 +65,7 @@ const Nav = () => (
                         href="https://www.instagram.com/cottagecoredream_/"
                       >
                         <i
-                          style={{ "font-size": "30px" }}
+                          style={{ fontSize: "30px" }}
                           className="fa fa-instagram"
                         ></i>
                       </a>
