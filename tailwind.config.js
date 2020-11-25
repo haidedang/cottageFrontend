@@ -1,5 +1,7 @@
-// tailwind.config.js
-
+// See https://tailwindcss.com/docs/configuration for details
 module.exports = {
-  important: true,
+  purge: ["./src/**/*.js"],
+  theme: {},
+  variants: {},
+  // https://github.com/tailwindcss/custom-forms
 };
