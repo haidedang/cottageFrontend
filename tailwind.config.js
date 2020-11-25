@@ -3,5 +3,6 @@ module.exports = {
   purge: ["./src/**/*.js"],
   theme: {},
   variants: {},
+  important: true,
   // https://github.com/tailwindcss/custom-forms
 };

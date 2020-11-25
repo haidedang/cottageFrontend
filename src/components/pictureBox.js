@@ -4,7 +4,7 @@ const PictureBox = () => {
   return (
     <div className=" text-center inline-block">
       <img
-        className="inline-block "
+        className="inline-block"
         src="https://user-images.githubusercontent.com/23120018/99684194-75c62600-2a81-11eb-903d-2ac73329a4af.gif"
       />
       <div className="text-left shadow-lg p-4 mt-8">
