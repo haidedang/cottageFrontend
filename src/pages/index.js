@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import ArticlesComponent from "../components/articles";
 import "../assets/css/main.css";
 
+
 const IndexPage = () => {
   const data = useStaticQuery(query);
 

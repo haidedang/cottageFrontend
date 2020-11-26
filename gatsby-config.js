@@ -14,7 +14,6 @@ module.exports = {
     // other metadata
   },
   plugins: [
-    `gatsby-plugin-sass`,
     "gatsby-plugin-react-helmet",
     {
       resolve: "@debiki/gatsby-plugin-talkyard",
@@ -58,9 +57,6 @@ module.exports = {
         postCssPlugins: [
           require(`tailwindcss`)(tailwindConfig),
           require(`autoprefixer`),
-          ...(process.env.NODE_ENV === `production`
-            ? [require(`cssnano`)]
-            : []),
         ],
       },
     },
