@@ -8,7 +8,7 @@ import Feed from "../components/Shoutout/Feed";
 import Layout from "../components/layout";
 import { USERNAME } from "../config/config";
 
-import "bootstrap/dist/css/bootstrap.min.css";
+//import "bootstrap/dist/css/bootstrap.min.css";
 //import '../fonts/Caveat-Bold.ttf'
 
 const ShoutoutPage = () => {
