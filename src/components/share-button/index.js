@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import tw, { styled } from "twin.macro";
+// import tw, { styled } from "twin.macro";
 
 import {
   FacebookShareButton,
@@ -26,12 +26,14 @@ const color = {
     "text-green-700 border-green-700 hover:bg-green-700 hover:border-green-700",
 };
 
-const Container = styled.div`
+/* const Container = styled.div`
   ${tw`
         flex flex-wrap justify-center
     `}
 `;
+ */
 
+const container = "flex flex-wrap justify-center";
 const buttonStyles =
   "rounded-full border-solid pr-3 pl-3 pt-1 pb-1 hover:text-white font-bold flex items-center ml-2 space-x-3 mb-2";
 
@@ -46,7 +48,7 @@ export function ShareButton({ socialConfig, tags, colors = color }) {
     return null;
   }
   return (
-    <Container>
+    <div className={container}>
       <FacebookShareButton
         url={socialConfig.config.url}
         className={`${buttonStyles} ${color.facebook}`}
@@ -97,6 +99,6 @@ export function ShareButton({ socialConfig, tags, colors = color }) {
         </span>
         <span className="text">WhatsApp</span>
       </WhatsappShareButton>
-    </Container>
+    </div>
   );
 }
