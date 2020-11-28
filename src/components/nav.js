@@ -34,11 +34,14 @@ const Nav = () => (
             <nav className="navbar navbar-light navbar-expand-md">
               <div className="container-fluid">
                 <a
-                  style={{ "font-family": "Niramit" }}
+                  style={{
+                    "font-family": "Lovers Quarrel",
+                    "font-size": "34px",
+                  }}
                   className="navbar-brand"
                   href="/"
                 >
-                  CD
+                  cottagecoredream
                 </a>
                 <button
                   data-toggle="collapse"

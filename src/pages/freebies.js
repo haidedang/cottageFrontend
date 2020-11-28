@@ -51,11 +51,10 @@ const Freebies = () => {
 
         {!loaded && (
           <div className="flex flex-col mt-12 lg:mt-24 max-w-md p-8 md:ml-16">
-            <p>
+            <p className="">
               Thank you for being part of the cottagcecore dream. To express our
               gratitude, we have created some unique GIFs for you to use on your
-              stories. There are 7 GIFs in total. We can’t wait to see the them
-              in your stories!
+              stories. There are 7 GIFs and one instruction video in total.
             </p>
 
             {!download && (
@@ -69,7 +68,7 @@ const Freebies = () => {
                 />
 
                 <button
-                  className="block w-64 mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded disabled:opacity-50"
+                  className="block w-64 mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded disabled:opacity-50 "
                   onClick={sendEmail}
                 >
                   Submit
@@ -104,8 +103,7 @@ const Freebies = () => {
           >
             <p>
               Your Free GIFs … <br /> <br />
-              P.S. Check our IG stories for details on how to use these GIFs on
-              your stories!
+              Have fun!
             </p>
           </div>
         )}
