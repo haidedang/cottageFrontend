@@ -33,7 +33,11 @@ const Nav = () => (
           <div>
             <nav className="navbar navbar-light navbar-expand-md">
               <div className="container-fluid">
-                <a className="navbar-brand" href="/">
+                <a
+                  style={{ "font-family": "Niramit" }}
+                  className="navbar-brand"
+                  href="/"
+                >
                   CD
                 </a>
                 <button
