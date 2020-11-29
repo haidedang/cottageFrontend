@@ -26,7 +26,7 @@ const Freebies = () => {
     console.log(downloadURL);
 
     if (re.test(email)) {
-      setDownload(true);
+      setLoaded(true);
 
       fetch(emailLink).then((res) => {
         console.log(res);
@@ -56,41 +56,22 @@ const Freebies = () => {
               gratitude, we have created some unique GIFs for you to use on your
               stories. There are 7 GIFs and one instruction video in total.
             </p>
+            <div>
+              <input
+                type="email"
+                placeholder="e.g. youremail@gmail.com"
+                className="  border w-full py-2 px-3 text-grey-darkest"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
 
-            {!download && (
-              <div>
-                <input
-                  type="email"
-                  placeholder="e.g. youremail@gmail.com"
-                  className="  border w-full py-2 px-3 text-grey-darkest"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-
-                <button
-                  className="block w-64 mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded disabled:opacity-50 "
-                  onClick={sendEmail}
-                >
-                  Submit
-                </button>
-              </div>
-            )}
-
-            {download && (
-              <a
-                className={[
-                  freebieStyles.loaded,
-                  "text-pink-500 bg-gray-50  block w-64 shadow border border-solid border-pink-500 hover:bg-pink-500 hover:text-white active:bg-pink-600 font-bold uppercase px-8 py-3 rounded outline-none focus:outline-none mr-1 mb-1",
-                ].join(" ")}
-                href={downloadURL}
-                onClick={handleLink}
-                download="FreebieGifs.zip"
+              <button
+                className="block w-64 mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded disabled:opacity-50 "
+                onClick={sendEmail}
               >
-                <button>
-                  <i class="fa fa-heart"></i> Download Now
-                </button>
-              </a>
-            )}
+                Download Now
+              </button>
+            </div>
           </div>
         )}
 
@@ -102,7 +83,9 @@ const Freebies = () => {
             ].join(" ")}
           >
             <p>
-              Your Free GIFs … <br /> <br />
+              We have sent you an email with the free gifs as an attachment. It
+              should arrive soon.
+              <br /> <br />
               Have fun!
             </p>
           </div>
