@@ -3,6 +3,6 @@ export const API_URL =
     ? "https://cottage-core.herokuapp.com"
     : "http://localhost:8080";
 
-export const USERNAME = "cottagecoredream_";
+export const USERNAME = "cottagecoredream";
 
 export const SERVER_URL = "https://cottage-core.herokuapp.com";

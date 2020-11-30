@@ -69,7 +69,7 @@ const Nav = () => (
                     <li className="nav-item" role="presentation">
                       <a
                         className="nav-link"
-                        href="https://www.instagram.com/cottagecoredream_/"
+                        href="https://www.instagram.com/cottagecoredream/"
                       >
                         <i
                           style={{ fontSize: "30px" }}
