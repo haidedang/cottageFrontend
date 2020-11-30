@@ -80,3 +80,7 @@ li {
     font-family: "Arial" !important;
   }
 }
+
+em {
+  color: black !important;
+}
