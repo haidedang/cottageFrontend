@@ -7,6 +7,9 @@ import "../assets/css/main.css";
 
 const IndexPage = () => {
   const data = useStaticQuery(query);
+  // sort array and display latest articles on the first index
+  // reverse order of array 
+  data.allStrapiArticle.edges.reverse()
 
   return (
     <Layout seo={data.strapiHomepage.seo}>
