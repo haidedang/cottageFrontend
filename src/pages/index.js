@@ -15,7 +15,7 @@ const IndexPage = () => {
     <Layout seo={data.strapiHomepage.seo}>
       <div className="uk-section">
         <div className="uk-container uk-container-large">
-          <h1>{data.strapiHomepage.hero.title}</h1>
+          <h1 className="text-3xl md:text-6xl">{data.strapiHomepage.hero.title}</h1>
           <ArticlesComponent articles={data.allStrapiArticle.edges} />
         </div>
       </div>
