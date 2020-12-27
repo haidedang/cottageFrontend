@@ -3,7 +3,8 @@ import { graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/layout";
 import ArticlesComponent from "../components/articles";
 import "../assets/css/main.css";
-
+import Footer from "../components/footer";
+import Sidebar from "../components/sidebar";
 
 const IndexPage = () => {
   const data = useStaticQuery(query);
@@ -13,12 +14,17 @@ const IndexPage = () => {
 
   return (
     <Layout seo={data.strapiHomepage.seo}>
-      <div className="uk-section">
-        <div className="uk-container uk-container-large">
+      <div className=" md:pt-24 md:pb-24">
+        <div className=" w-11/12 lg:w-10/12 m-auto">
           <h1 className="text-3xl md:text-6xl">{data.strapiHomepage.hero.title}</h1>
           <ArticlesComponent articles={data.allStrapiArticle.edges} />
         </div>
       </div>
+      <div className="w-11/12 m-auto">
+      <Sidebar />
+      </div>
+      
+      <Footer />
     </Layout>
   );
 };
