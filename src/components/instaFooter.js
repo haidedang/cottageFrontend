@@ -18,13 +18,17 @@ class InstaFeed extends Component {
     componentDidMount() {
         this.props
             .getFeedFn(this.props.userName)
-            .then((media) => this.setState({ loading: false, media: media.splice(3) }))
-            .catch((error) => this.setState({ error }));
+            .then((media) => this.setState({ loading: false, media: media }))
+            .catch((error) => {
+                console.log('FUCK THIS')
+                alert('FUCK')
+            }
+             );
     }
 
     render() {
         if (this.state.error) throw this.state.error;
-
+        
         return (
                 <div className={this.props.footer}>
                     {this.state.media.map((media, index) => (

@@ -2,6 +2,7 @@ import React from "react";
 import { Link, StaticQuery, graphql } from "gatsby";
 import { USERNAME } from "../config/config";
 import Helmet from "react-helmet";
+
 const Nav = () => (
   <StaticQuery
     query={graphql`
@@ -20,7 +21,7 @@ const Nav = () => (
       }
     `}
     render={(data) => (
-      <div>
+      <div style={{backgroundColor:"rgb(222 239 206)"}}>
         <section>
           <div>
             <nav className="navbar navbar-light navbar-expand-md">

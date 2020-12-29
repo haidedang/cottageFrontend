@@ -8,7 +8,7 @@ let styles = {
     fontSize: "14px",
   },
   h4:
-    "uppercase font-black text-center border-black pt-2 pb-2 border-solid border-t border-b",
+    "tracking-widest uppercase font-black text-center border-black pt-2 pb-2 border-solid border-t border-b",
   footer: "flex flex-wrap",
   media: "w-4/12 pr-2 pb-2",
 };
@@ -57,7 +57,7 @@ const Sidebar = () => (
           />
                        
           <button
-            className="block w-64  bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded disabled:opacity-50"
+            className="block bg-green-800 hover:bg-green-700 text-white font-bold py-2 px-4 rounded disabled:opacity-50"
             type="submit"
           >
             Submit
@@ -74,20 +74,20 @@ const Sidebar = () => (
             userName="cottagecoredream"
           />
         </div>
-        <div className="categories mt-4">
+        {/* <div className="categories mt-4">
         <h4 className={styles.h4} style={styles.font}>
             Categories
           </h4>
           <ul className="uk-nav uk-dropdown-nav">
             {data.allStrapiCategory.edges.map((category, i) => (
-              <li key={`category__${category.node.slug}`}>
+              <li style={{}} key={`category__${category.node.slug}`}>
                 <Link to={`/category/${category.node.slug}`}>
                   {category.node.name}
                 </Link>
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
       </div>
     )}
   />

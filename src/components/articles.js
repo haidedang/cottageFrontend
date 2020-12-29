@@ -8,7 +8,8 @@ const Articles = ({ articles }) => {
 
   return (
     <div>
-      <div className="uk-child-width-1-2@s" data-uk-grid="true">
+      <div className="" >
+        {/* Main article / NEwest article */}
         <div>
           {leftArticles.map((article, i) => {
             return (
@@ -19,6 +20,8 @@ const Articles = ({ articles }) => {
             );
           })}
         </div>
+
+        {/* Old articles */}
         <div>
           <div className="uk-child-width-1-2@m uk-grid-match" data-uk-grid>
             {rightArticles.map((article, i) => {

@@ -5,24 +5,19 @@ import cardStyles from "./card.module.css";
 
 const Card = ({ article }) => {
   return (
-    <Link to={`/article/${article.node.slug}`} className="uk-link-reset">
-      <div className="uk-card uk-card-muted">
+    <Link to={`/article/${article.node.slug}`} className="">
+      <div className="mb-2">
         <Img
-          className={[cardStyles.imageWrapper, "uk-card-media-top"].join(" ")}
-          fluid={article.node.image.childImageSharp.fluid}
-          /*  objectFit="cover"
-         objectPosition="50% 50%" */
-          /*  imgStyle={{ position: "static",  objectFit:"cover" }} */
-          imgStyle={{ width: "100%", maxHeight: "100%" }}
+          fluid={{...article.node.image.childImageSharp.fluid, aspectRatio: 4/3}}
+          style={{maxHeight:"600px"}}
         ></Img>
-        <div className="uk-card-body">
-          <p id="category" className="uk-text-uppercase">
+        <div className="flex flex-col items-center mb-4">
+          <p id="category" className="mb-1 mt-2 tracking-widest " style={{color:"#be9656"}}>
             {article.node.category.name}
           </p>
-          <p id="title" className="uk-text-large">
+          <p id="title" className="text-center m-0">
             {article.node.title}
           </p>
-          <div>
             <hr className="uk-divider-small" />
             <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
               <div>
@@ -39,7 +34,7 @@ const Card = ({ article }) => {
                 </p>
               </div>
             </div>
-          </div>
+          
         </div>
       </div>
     </Link>
