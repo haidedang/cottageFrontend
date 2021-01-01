@@ -27,8 +27,10 @@
   border-radius: 20px;
 }
 
-.content .subtitle {
+.content h6 {
   text-align: center;
+  font-size: 18px;
+  font-style: italic;
 }
 
 .content p,
