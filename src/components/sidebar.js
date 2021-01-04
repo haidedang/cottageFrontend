@@ -1,6 +1,7 @@
 import React from "react";
 import Insta from "./instaFooter";
 import { Link, StaticQuery, graphql } from "gatsby";
+import InputField from "../components/input";
 
 let styles = {
   font: {
@@ -51,17 +52,7 @@ const Sidebar = () => (
             {" "}
             subscribe
           </h4>
-          <input
-            className="block border w-full py-2 px-3 text-grey-darkest"
-            placeholder="Your Email"
-          />
-                       
-          <button
-            className="block bg-green-800 hover:bg-green-700 text-white font-bold py-2 px-4 rounded disabled:opacity-50"
-            type="submit"
-          >
-            Submit
-          </button>
+          <InputField title="subscribe" />
         </div>
         <div className="instaWidget mt-4">
           <h4 className={styles.h4} style={styles.font}>
