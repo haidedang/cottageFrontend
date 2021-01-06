@@ -4,6 +4,13 @@ import Layout from "../components/layout";
 import { navigate } from "gatsby";
 import freebieStyles from "./freebies.module.css";
 
+let seo = {};
+seo = {
+  metaTitle: "Cottagecore Dream Freebies",
+  metaDescription:
+    "As a thank you for your support we gift a set of cottagecore animated GIFs. Click for download.",
+};
+
 const Freebies = () => {
   const [email, setEmail] = useState("");
   const [loaded, setLoaded] = useState(false);
@@ -41,7 +48,7 @@ const Freebies = () => {
   };
 
   return (
-    <Layout>
+    <Layout seo={seo}>
       <div className="text-center p-8 pb-10">
         <h2>Cottagecore Freebies</h2>
         <p>A collection of ressources free for our cottagecore community.</p>

@@ -10,10 +10,16 @@ import { USERNAME } from "../config/config";
 
 //import "bootstrap/dist/css/bootstrap.min.css";
 //import '../fonts/Caveat-Bold.ttf'
+let seo = {};
+seo = {
+  metaTitle: "About CottageCore Dream",
+  metaDescription:
+    "A cottagecore lifestyle blog and community. We write about cottagecore related themes like gardening, DIY, embroidery and farmlife.",
+};
 
 const ShoutoutPage = () => {
   return (
-    <Layout>
+    <Layout seo={seo}>
       <div className={ShoutoutStyles.wrapper}>
         <div className={ShoutoutStyles.image}>
           <div className={ShoutoutStyles.container}>
