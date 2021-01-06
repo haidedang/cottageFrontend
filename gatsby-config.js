@@ -20,13 +20,28 @@ module.exports = {
   siteMetadata: {
     // ...
     siteUrl,
-    url: "https://swas.io",
     // other metadata
   },
   plugins: [
     {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        exclude: [
+          "/category/Lifestyle",
+          "/category/Fashion",
+          "/category/Community",
+          "/category/Recipes",
+          "/category/Nature",
+          "/category/Knitting",
+          "/category/Gardening",
+        ],
+      },
+    },
+    {
       resolve: "gatsby-plugin-robots-txt",
       options: {
+        host: "https://www.cottagecoredream.com",
+        sitemap: "https://wwww.cottagecoredream.com/sitemap.xml",
         resolveEnv: () => NETLIFY_ENV,
         env: {
           production: {
