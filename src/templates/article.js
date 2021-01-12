@@ -75,23 +75,24 @@ const Article = ({ data }) => {
   }
 
   return (
-    <Layout seo={seo} header={ <BackgroundImage
-      id="banner"
-      className={[
-        articleStyles.bannerImage,
-        "uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin",
-      ].join(" ")}
-      fluid={article.image.childImageSharp.fluid}
-      /* data-src={article.image.publicURL}
-        data-srcset={article.image.publicURL}
-        data-uk-img */
-    >
-      <div className={articleStyles.captionHeader}>
-        <h1 className={articleStyles.bannerCaption}>{article.title}</h1>
-      </div>
-    </BackgroundImage>}>
-      
-      <article className={[articleStyles.articleSection, "uk-section"].join(" ")}>
+    <Layout seo={seo}>
+      <BackgroundImage
+        id="banner"
+        className={[
+          articleStyles.bannerImage,
+          "uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin",
+        ].join(" ")}
+        fluid={article.image.childImageSharp.fluid}
+        /* data-src={article.image.publicURL}
+          data-srcset={article.image.publicURL}
+          data-uk-img */
+      >
+        <div className={articleStyles.captionHeader}>
+          <h1 className={articleStyles.bannerCaption}>{article.title}</h1>
+        </div>
+      </BackgroundImage>
+
+      <div className={[articleStyles.articleSection, "uk-section"].join(" ")}>
         <div className="uk-container uk-container-small">
           <Markdown
             className={articleStyles.content}
@@ -127,7 +128,7 @@ const Article = ({ data }) => {
             </div>
           </div>
         </div>
-      </article>
+      </div>
 
       <div className="mb-4 max-w-7xl md:max-w-screen-lg p-3 mx-auto">
         <ShareButton
