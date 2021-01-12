@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from "gatsby";
 import Nav from "./nav";
 import Seo from "./seo";
 
-const Layout = ({ children, seo }) => (
+const Layout = ({ children, seo, header, footer }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -23,7 +23,9 @@ const Layout = ({ children, seo }) => (
       <>
         <Seo seo={seo} />
         <Nav />
+        <header>{header}</header>
         <main>{children}</main>
+        <footer>{footer}</footer>
       </>
     )}
   />

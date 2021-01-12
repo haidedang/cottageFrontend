@@ -2,9 +2,14 @@ import React from "react";
 import Card from "./card";
 
 const Articles = ({ articles }) => {
-  const leftArticlesCount = Math.ceil(articles.length / 5);
-  const leftArticles = articles.slice(0, leftArticlesCount);
-  const rightArticles = articles.slice(leftArticlesCount, articles.length);
+  // sort them by published date
+  articles.sort((a,b) => {
+    return new Date(b.node.publishedAt) - new Date(a.node.publishedAt)
+  })
+  const leftArticles = [articles[0]]
+  const rightArticles = articles.slice(1, articles.length)
+
+ 
 
   return (
     <div>
