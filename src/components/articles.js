@@ -6,10 +6,9 @@ const Articles = ({ articles }) => {
   articles.sort((a,b) => {
     return new Date(b.node.publishedAt) - new Date(a.node.publishedAt)
   })
-  const leftArticles = [articles[0]]
+  console.log(articles)
+  const leftArticles = articles.slice(0, 1)
   const rightArticles = articles.slice(1, articles.length)
-
- 
 
   return (
     <div>

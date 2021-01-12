@@ -55,6 +55,7 @@ const query = graphql`
           strapiId
           slug
           title
+          publishedAt
           category {
             name
           }
