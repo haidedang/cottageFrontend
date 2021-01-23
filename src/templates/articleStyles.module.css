@@ -87,9 +87,9 @@ li {
   }
 }
 
-ul {
-  list-style-type: disc; /* this should be the default style */
-}
+/* ul {
+  list-style-type: disc; // this should be the default style 
+} */
 
 em {
   color: black !important;
