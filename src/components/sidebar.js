@@ -65,7 +65,7 @@ const Sidebar = () => (
             userName="cottagecoredream"
           />
         </div>
-        {/* <div className="categories mt-4">
+        <div className="categories mt-4">
         <h4 className={styles.h4} style={styles.font}>
             Categories
           </h4>
@@ -78,7 +78,7 @@ const Sidebar = () => (
               </li>
             ))}
           </ul>
-        </div> */}
+        </div>
       </div>
     )}
   />

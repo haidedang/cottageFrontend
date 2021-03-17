@@ -16,9 +16,10 @@ export const query = graphql`
             name
           }
           image {
+            publicURL
             childImageSharp {
-              fixed(width: 660) {
-                src
+              fluid(quality: 90, maxWidth: 1920) {
+                ...GatsbyImageSharpFluid_tracedSVG
               }
             }
           }
@@ -27,7 +28,7 @@ export const query = graphql`
             picture {
               childImageSharp {
                 fixed(width: 30, height: 30) {
-                  ...GatsbyImageSharpFixed
+                  src
                 }
               }
             }
@@ -52,7 +53,7 @@ const Category = ({ data }) => {
   return (
     <Layout seo={seo}>
       <div className="uk-section">
-        <div className="uk-container uk-container-large">
+        <div className="w-11/12 md:w-8/12 md:pb-24 lg:max-w-screen-lg m-auto">
           <h1>{category}</h1>
           <ArticlesComponent articles={articles} />
         </div>
