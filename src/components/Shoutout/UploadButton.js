@@ -2,7 +2,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button'
 import {navigate} from 'gatsby';
-import ShoutoutStyles from '../../pages/ShoutoutPage.module.css'
+import ShoutoutStyles from '../../pages/about/ShoutoutPage.module.css'
 
 class UploadButton extends React.Component{
 

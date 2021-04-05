@@ -1,7 +1,5 @@
 import React from "react";
 import { Link, StaticQuery, graphql } from "gatsby";
-import { USERNAME } from "../config/config";
-import Helmet from "react-helmet";
 
 const Nav = () => (
   <StaticQuery

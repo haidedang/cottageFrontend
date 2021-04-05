@@ -1,6 +1,6 @@
 import React from 'react'
 import uploadStyles from './uploadStyles.module.css'
-import UploadBox from '../components//Shoutout/UploadBox'
+import UploadBox from '../../components/Shoutout/UploadBox'
 import { Link } from "gatsby"
 
 

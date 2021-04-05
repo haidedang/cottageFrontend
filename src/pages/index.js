@@ -1,10 +1,10 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import Layout from "../components/layout";
-import ArticlesComponent from "../components/articles";
+import Layout from "../components/layout/layout";
+import ArticlesComponent from "../components/articles/articles";
 import "../assets/css/main.css";
-import Footer from "../components/footer";
-import Sidebar from "../components/sidebar";
+import Footer from "../components/layout/footer";
+import Sidebar from "../components/layout/sidebar";
 
 const IndexPage = () => {
   const data = useStaticQuery(query);

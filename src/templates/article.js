@@ -2,15 +2,14 @@ import React from "react";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import Moment from "react-moment";
-import Layout from "../components/layout";
+import Layout from "../components/layout/layout";
 import Markdown from "react-markdown";
 import articleStyles from "./articleStyles.module.css";
 import BackgroundImage from "gatsby-background-image";
-import { SERVER_URL } from "../config/config";
 import TalkyardCommentsIframe from "@debiki/gatsby-plugin-talkyard";
-import Comments from "../components/Comments";
 import { ShareButton } from "../components/share-button";
 import { ScrollArrow } from "../components/scroll-arrow";
+
 
 export const query = graphql`
   query ArticleQuery($slug: String!) {
