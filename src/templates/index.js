@@ -6,11 +6,13 @@ import "../assets/css/main.css";
 import Footer from "../components/layout/footer";
 import Sidebar from "../components/layout/sidebar";
 
-const IndexPage = () => {
-  const data = useStaticQuery(query);
+const IndexPage = ({data, pageContext}) => {
+  console.log(data)
+  console.log('pageContext', pageContext)
+  //const data = useStaticQuery(query);
   // sort array and display latest articles on the first index
   // reverse order of array
-  data.allStrapiArticle.edges.reverse();
+ // data.allStrapiArticle.edges.reverse();
 
   return (
     <Layout seo={data.strapiHomepage.seo}>
@@ -35,8 +37,8 @@ const IndexPage = () => {
   );
 };
 
-const query = graphql`
-  query {
+export const query = graphql`
+  query($limit: Int!) {
     strapiHomepage {
       hero {
         title
@@ -49,7 +51,9 @@ const query = graphql`
         }
       }
     }
-    allStrapiArticle(filter: { status: { eq: "published" } }) {
+    allStrapiArticle(filter: { status: { eq: "published" } }
+    limit: $limit
+    ) {
       edges {
         node {
           strapiId
