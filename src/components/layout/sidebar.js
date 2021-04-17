@@ -1,7 +1,7 @@
 import React from "react";
 import Insta from "./instaFooter";
 import { Link, StaticQuery, graphql } from "gatsby";
-import InputField from "../components/input";
+import InputField from "../input/input";
 
 let styles = {
   font: {
@@ -37,7 +37,7 @@ const Sidebar = () => (
           <h4 className={styles.h4} style={styles.font}>
             About Us
           </h4>
-          <img src={require("../../static/home2.jpg")}></img>
+          <img src={require("../../../static/home2.jpg")}></img>
           <p style={styles.font}>
             The Cottagecore Dream is a lifestyle blog and community inspired by
             the ideas of simplicity, sustainability, slow living and harmony

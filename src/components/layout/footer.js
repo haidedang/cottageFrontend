@@ -20,7 +20,7 @@ const Footer = () => {
       </div>
       <Insta footer={styles.footer} media={styles.media} userName="cottagecoredream" />
     </div>
-    <div id="copyright">© Copyright cottagecoredream - Made by haidedang</div>
+    {/* <div id="copyright">© Copyright cottagecoredream - Made by haidedang</div> */}
     </div>
   );
 };

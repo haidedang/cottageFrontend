@@ -1,11 +1,8 @@
 import React from "react";
 import ShoutoutStyles from "./ShoutoutPage.module.css";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-import UploadButton from "../components/Shoutout/UploadButton";
 import Feed from "../components/Shoutout/Feed";
-import Layout from "../components/layout";
+import Layout from "../components/layout/layout";
 import { USERNAME } from "../config/config";
 
 //import "bootstrap/dist/css/bootstrap.min.css";

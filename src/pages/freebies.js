@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import PictureBox from "../components/pictureBox";
-import Layout from "../components/layout";
-import { navigate } from "gatsby";
+import Layout from "../components/layout/layout";
 import freebieStyles from "./freebies.module.css";
 
 let seo = {};

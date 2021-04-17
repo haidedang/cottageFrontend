@@ -1,3 +1,5 @@
+const { paginate } = require('gatsby-awesome-pagination')
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const result = await graphql(
@@ -22,6 +24,14 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     `
   );
+
+  paginate({
+    createPage,
+    items: result.data.articles.edges,
+    itemsPerPage: 4,
+    pathPrefix:"/",
+    component: require.resolve('./src/templates/index.js')
+  })
 
   if (result.errors) {
     throw result.errors;
