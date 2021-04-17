@@ -5,6 +5,7 @@ import ArticlesComponent from "../components/articles/articles";
 import "../assets/css/main.css";
 import Footer from "../components/layout/footer";
 import Sidebar from "../components/layout/sidebar";
+import Pager from "../components/pager"; 
 
 const IndexPage = ({data, pageContext}) => {
   console.log(data)
@@ -25,11 +26,16 @@ const IndexPage = ({data, pageContext}) => {
             <div className=" w-11/12 lg:w-10/12 mx-auto md:m-0">
               {/* <h1 className="text-3xl md:text-6xl">{data.strapiHomepage.hero.title}</h1> */}
               <ArticlesComponent articles={data.allStrapiArticle.edges} />
+              <div className="text-center">
+                <Pager pageContext={pageContext}/> 
+              </div>
             </div>
+            
           </div>
           <div className="w-11/12 pl-4 pr-4 md:ml-0 md:mr-0 md:w-4/12 lg:w-4/12 2xl:w-1/5 ">
             <Sidebar />
           </div>
+        
           <Footer />
         </div>
       </div>
@@ -38,7 +44,7 @@ const IndexPage = ({data, pageContext}) => {
 };
 
 export const query = graphql`
-  query($limit: Int!) {
+  query($skip: Int!, $limit: Int!) {
     strapiHomepage {
       hero {
         title
@@ -52,6 +58,8 @@ export const query = graphql`
       }
     }
     allStrapiArticle(filter: { status: { eq: "published" } }
+    sort: {fields:createdAt, order: DESC}
+    skip: $skip
     limit: $limit
     ) {
       edges {
