@@ -1,9 +1,9 @@
 import React from "react";
 import ShoutoutStyles from "./ShoutoutPage.module.css";
 import Container from "react-bootstrap/Container";
-import Feed from "../../components/Shoutout/Feed";
-import Layout from "../../components/layout/layout";
-import { USERNAME } from "../../config/config";
+import Feed from "../components/Shoutout/Feed";
+import Layout from "../components/layout/layout";
+import { USERNAME } from "../config/config";
 
 //import "bootstrap/dist/css/bootstrap.min.css";
 //import '../fonts/Caveat-Bold.ttf'
