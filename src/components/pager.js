@@ -6,7 +6,7 @@ const Pager = ({pageContext }) => {
     const { previousPagePath, nextPagePath } = pageContext; 
 
     return (
-        <div className="mt-4">
+        <div className="mt-4 mb-12">
             {previousPagePath && (
                 <span className="mr-12"><Link to ={previousPagePath}><FaAngleLeft size="24px" className="inline mr-12" style={{color: "#456b45"}}/></Link></span>
             )}
