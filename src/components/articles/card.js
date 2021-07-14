@@ -6,8 +6,9 @@ import cardStyles from "./card.module.css";
 const Card = ({ article }) => {
   return (
     <Link to={`/article/${article.node.slug}`} className="">
-      <div className="mb-2">
+      <div className="mb-2 rounded-lg">
         <Img
+          className="rounded-md"
           fluid={{...article.node.image.childImageSharp.fluid, aspectRatio: 4/3}}
           style={{maxHeight:"600px"}}
         ></Img>

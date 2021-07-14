@@ -19,7 +19,7 @@ const Nav = () => (
       }
     `}
     render={(data) => (
-      <div style={{backgroundColor:"rgb(222 239 206)"}}>
+      <div style={{backgroundColor:"#e5e3c9"}}>
         <section>
           <div>
             <nav className="navbar navbar-light navbar-expand-md">
@@ -32,7 +32,7 @@ const Nav = () => (
                   className="navbar-brand"
                   href="/"
                 >
-                  cottagecoredream
+                  <img src={require("../../../static/cottageLogo.jpg") } width="250" />
                 </a>
                 <button
                   data-toggle="collapse"
