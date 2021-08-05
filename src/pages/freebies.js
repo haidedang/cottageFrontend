@@ -58,7 +58,7 @@ const Freebies = () => {
         {!loaded && (
           <div className="flex flex-col mt-12 lg:mt-24 max-w-md p-8 md:ml-16">
             <p className="">
-              Thank you for being part of the cottagcecore dream. To express our
+              Thank you for being part of the cottagecore dream. To express our
               gratitude, we have created some unique GIFs for you to use on your
               stories. There are 7 GIFs and one instruction video in total.
             </p>
